@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!--End Of Google Font Link-->
 
+    <!-- FontAwesome Link -->
+    <script src="https://kit.fontawesome.com/cfbf8481bd.js" crossorigin="anonymous"></script>
+
     <!-- Daisyui and Tailwind link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script> <!--End of Daisy and Tailwind link-->
@@ -34,10 +37,39 @@
       </script> <!--End of Tailwind Theme Script-->
     <title>Nature's Platter</title>
 </head>
-<body class="font-sora">
+<body class="font-sora text-black">
 
     <!-- Header Section -->
-    <header></header>
+    <header>
+
+        <!-- Navigation Bar -->
+         <nav class="mx-10 mt-6 md:mt-10 md:mx-auto flex justify-between md:justify-around items-center">
+            <div class="mr-10">
+                <img src="assets/logo-header.png" alt="">
+            </div>
+
+            <div class="flex gap-32 justify-between items-center">
+                <div class="hidden md:block">
+                    <ul class="flex gap-10">
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+    
+                <div class="hidden md:block">
+                    <ul class="flex items-center gap-10">
+                        <li><a href="#"><i class="fa-solid fa-magnifying-glass text-2xl"></i></a></li>
+                        <li><a href=""><i class="fa-solid fa-cart-shopping text-2xl"></i></a></li>
+                        <li><a href=""><button class="border border-lightGreen rounded-lg px-8 py-3">Login</button></a></li>
+                        <li><a href=""><button class="border-none bg-lightGreen text-white rounded-lg px-8 py-3">Register</button></a></li>
+                    </ul> 
+                </div>
+            </div>
+            <i class="fa-solid fa-bars text-2xl md:hidden"></i>
+         </nav>
+
+    </header>
 
     <!-- Main Section -->
      <main></main>
