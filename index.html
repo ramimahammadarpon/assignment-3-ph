@@ -1,90 +1,183 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google Font Link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!--End Of Google Font Link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--End Of Google Font Link-->
 
     <!-- FontAwesome Link -->
-    <script src="https://kit.fontawesome.com/cfbf8481bd.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/cfbf8481bd.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Daisyui and Tailwind link -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script> <!--End of Daisy and Tailwind link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--End of Daisy and Tailwind link-->
 
     <!-- Tailwind Theme Script Link -->
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-                lightGreen: '#179800',
-                darkGreen: '#115414',
-                fadeGreen: '#63B76D',
-                fadeBlue: '#2A4D97',
-                darkBlue: '#102861',
-                background: '#EFEBE3'
-              },
-              fontFamily: {
-                sora: ["Sora", 'serif']
-              }
-            }
-          }
-        }
-      </script> <!--End of Tailwind Theme Script-->
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              lightGreen: "#179800",
+              darkGreen: "#115414",
+              fadeGreen: "#63B76D",
+              fadeBlue: "#2A4D97",
+              darkBlue: "#102861",
+              background: "#EFEBE3",
+            },
+            fontFamily: {
+              sora: ["Sora", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!--End of Tailwind Theme Script-->
     <title>Nature's Platter</title>
-</head>
-<body class="font-sora text-black">
+  </head>
+  <body class="font-sora text-black">
     <!-- Header Section -->
     <header class="bg-gradient-to-b from-white to-background">
+      <!-- Navigation Bar -->
+      <nav
+        class="max-w-screen-xl mx-auto px-10 py-4 md:mt-10 md:px-0 flex justify-between items-center border-lightGreen border-b-[1px] md:border-none"
+      >
+        <div class="mr-10">
+          <img src="assets/logo-header.png" alt="" />
+        </div>
 
-        <!-- Navigation Bar -->
-         <nav class="px-10 py-4 md:mt-10 md:px-0 flex justify-between md:justify-around items-center border-lightGreen border-b-[1px] md:border-none">
-            <div class="mr-10">
-                <img src="assets/logo-header.png" alt="">
-            </div>
+        <div class="flex gap-28 justify-between items-center">
+          <div class="hidden md:block">
+            <ul class="flex gap-10">
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
 
-            <div class="flex gap-28 justify-between items-center">
-                <div class="hidden md:block">
-                    <ul class="flex gap-10">
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-    
-                <div class="hidden md:block">
-                    <ul class="flex items-center gap-10">
-                        <li><a href="#"><i class="fa-solid fa-magnifying-glass text-2xl"></i></a></li>
-                        <li><a href=""><i class="fa-solid fa-cart-shopping text-2xl"></i></a></li>
-                        <li><a href=""><button class="border border-lightGreen rounded-lg px-8 py-3">Login</button></a></li>
-                        <li><a href=""><button class="border-none bg-lightGreen text-white rounded-lg px-8 py-3">Register</button></a></li>
-                    </ul> 
-                </div>
-            </div>
-            <i class="fa-solid fa-bars text-2xl md:hidden"></i>
-         </nav> <!--Navigation Bar Ended-->
+          <div class="hidden md:block">
+            <ul class="flex items-center gap-10">
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-magnifying-glass text-2xl"></i
+                ></a>
+              </li>
+              <li>
+                <a href=""
+                  ><i class="fa-solid fa-cart-shopping text-2xl"></i
+                ></a>
+              </li>
+              <li>
+                <a href=""
+                  ><button
+                    class="border border-lightGreen rounded-lg px-8 py-3"
+                  >
+                    Login
+                  </button></a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><button
+                    class="border-none bg-lightGreen text-white rounded-lg px-8 py-3"
+                  >
+                    Register
+                  </button></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <i class="fa-solid fa-bars text-2xl md:hidden"></i>
+      </nav>
+      <!--Navigation Bar Ended-->
 
-         <!-- Hero Section -->
-         <div class="max-w-5xl mx-auto my-24">
-            <h1 class="font-semibold text-6xl text-center">Freshness <span class="text-lightGreen">You Can<br>Count</span> On, Prices You’ll Love!</h1>
-            <p class="text-xl text-center mt-8 mb-9">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day!</p>
+      <!-- Hero Section -->
+      <div class="max-w-5xl mx-auto my-24">
+        <h1 class="font-semibold text-6xl text-center">
+          Freshness <span class="text-lightGreen">You Can<br />Count</span> On,
+          Prices You’ll Love!
+        </h1>
+        <p class="text-xl text-center mt-8 mb-9">
+          Shop your daily essentials at unbeatable prices. From fresh produce to
+          pantry staples, we’ve got you covered every day!
+        </p>
 
-            <div>
-                <img src="assets/hero-vegetables.png" alt="">
-            </div>
-         </div>
-
+        <div>
+          <img src="assets/hero-vegetables.png" alt="" />
+        </div>
+      </div>
     </header>
+    <!--End of Header Section-->
 
     <!-- Main Section -->
-     <main></main>
+    <main>
+      <!-- Services Section -->
+      <section class="mb-24 max-w-screen-xl mx-5 md:mx-auto">
+        <h1 class="text-lightGreen text-4xl font-semibold mb-12">Services</h1>
 
-     <!-- Footer Section -->
-      <footer></footer>
-</body>
+        <!-- Cards Container -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <!-- card 1 -->
+          <div class="card bg-background shadow-xl pt-8">
+            <figure>
+              <img src="assets/service.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="text-center font-semibold text-2xl">24/7 Services</h2>
+              <p class="text-center text-xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt
+              </p>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="card bg-background shadow-xl pt-8">
+            <figure>
+              <img src="assets/delivery.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="text-center font-semibold text-2xl">Fast Delivery</h2>
+              <p class="text-center text-xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt
+              </p>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="card bg-background shadow-xl pt-8">
+            <figure>
+              <img src="assets/healthy.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="text-center font-semibold text-2xl">Healthy Products </h2>
+              <p class="text-center text-xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt
+              </p>
+            </div>
+          </div> <!--Card 3 ends here-->
+        </div> <!--Cards Container ends here-->
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer></footer>
+  </body>
 </html>
