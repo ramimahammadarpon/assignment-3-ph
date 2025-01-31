@@ -26,7 +26,8 @@
                 darkGreen: '#115414',
                 fadeGreen: '#63B76D',
                 fadeBlue: '#2A4D97',
-                darkBlue: '#102861'
+                darkBlue: '#102861',
+                background: '#EFEBE3'
               },
               fontFamily: {
                 sora: ["Sora", 'serif']
@@ -38,17 +39,16 @@
     <title>Nature's Platter</title>
 </head>
 <body class="font-sora text-black">
-
     <!-- Header Section -->
-    <header>
+    <header class="bg-gradient-to-b from-white to-background">
 
         <!-- Navigation Bar -->
-         <nav class="mx-10 mt-6 md:mt-10 md:mx-auto flex justify-between md:justify-around items-center">
+         <nav class="px-10 py-4 md:mt-10 md:px-0 flex justify-between md:justify-around items-center border-lightGreen border-b-[1px] md:border-none">
             <div class="mr-10">
                 <img src="assets/logo-header.png" alt="">
             </div>
 
-            <div class="flex gap-32 justify-between items-center">
+            <div class="flex gap-28 justify-between items-center">
                 <div class="hidden md:block">
                     <ul class="flex gap-10">
                         <li><a href="#">Products</a></li>
@@ -67,7 +67,17 @@
                 </div>
             </div>
             <i class="fa-solid fa-bars text-2xl md:hidden"></i>
-         </nav>
+         </nav> <!--Navigation Bar Ended-->
+
+         <!-- Hero Section -->
+         <div class="max-w-5xl mx-auto my-24">
+            <h1 class="font-semibold text-6xl text-center">Freshness <span class="text-lightGreen">You Can<br>Count</span> On, Prices You’ll Love!</h1>
+            <p class="text-xl text-center mt-8 mb-9">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day!</p>
+
+            <div>
+                <img src="assets/hero-vegetables.png" alt="">
+            </div>
+         </div>
 
     </header>
 
