@@ -32,6 +32,15 @@
       tailwind.config = {
         theme: {
           extend: {
+            keyframes: {
+              spinOnce: {
+                '0%': {transform: 'rotate(0deg)'},
+                '100%': {transform: 'rotate(360deg)'},
+              }
+            },
+            animation: {
+              spinOnce: 'spinOnce 2s ease-out'
+            },
             colors: {
               clifford: "#da373d",
               lightGreen: "#179800",
@@ -51,15 +60,15 @@
     <!--End of Tailwind Theme Script-->
     <title>Nature's Platter</title>
   </head>
-  <body class="font-sora text-black">
+  <body class="font-sora text-black border-box">
     <!-- Header Section -->
-    <header class="bg-gradient-to-b from-white to-background">
+    <header class="bg-gradient-to-b from-white to-background overflow-hidden">
       <!-- Navigation Bar -->
       <nav
         class="max-w-screen-xl mx-auto px-10 py-4 md:mt-10 md:px-0 flex justify-between items-center border-lightGreen border-b-[1px] md:border-none"
       >
         <div class="mr-10">
-          <img src="assets/logo-header.png" alt="" />
+          <img src="assets/logo-header.png" alt="" class="animate-pulse"/>
         </div>
 
         <div class="flex gap-28 justify-between items-center">
@@ -80,7 +89,7 @@
               </li>
               <li>
                 <a href=""
-                  ><i class="fa-solid fa-cart-shopping text-2xl"></i
+                  ><i class="fa-solid fa-cart-shopping text-2xl animate-bounce"></i
                 ></a>
               </li>
               <li>
@@ -109,9 +118,9 @@
       <!--Navigation Bar Ended-->
 
       <!-- Hero Section -->
-      <div class="max-w-5xl mx-auto my-24">
+      <div class="max-w-5xl mx-auto my-24 animate-spinOnce">
         <h1 class="font-semibold text-6xl text-center">
-          Freshness <span class="text-lightGreen">You Can<br />Count</span> On,
+          Freshness <span class="text-lightGreen">You Can Count</span> On,
           Prices You’ll Love!
         </h1>
         <p class="text-xl text-center mt-8 mb-9">
@@ -166,18 +175,300 @@
               <img src="assets/healthy.png" alt="Shoes" />
             </figure>
             <div class="card-body">
-              <h2 class="text-center font-semibold text-2xl">Healthy Products </h2>
+              <h2 class="text-center font-semibold text-2xl">
+                Healthy Products
+              </h2>
               <p class="text-center text-xl">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt
               </p>
             </div>
-          </div> <!--Card 3 ends here-->
-        </div> <!--Cards Container ends here-->
+          </div>
+          <!--Card 3 ends here-->
+        </div>
+        <!--Cards Container ends here-->
+      </section>
+
+      <!-- Popular Products Section -->
+      <section
+        class="mb-24 py-12 md:py-24 px-5 md:px-0 md:mx-auto bg-background"
+      >
+        <h1
+          class="max-w-screen-xl mx-auto px-5 md:px-0 text-lightGreen text-4xl font-semibold mb-12"
+        >
+          Popular Products
+        </h1>
+
+        <!-- Card Container -->
+        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-5">
+          <div
+            class="md:w-1/3 px-8 pt-14 pb-28 rounded-xl"
+            style="
+              background: url(assets/vegetable-offer.png),
+                linear-gradient(
+                  to bottom right,
+                  rgb(31, 205, 1),
+                  rgba(255, 255, 255, 0.1)
+                );
+              background-repeat: no-repeat;
+              background-position: bottom right;
+            "
+          >
+            <h1 class="text-white text-3xl font-bold mb-5">30% off</h1>
+            <p class="opacity-70 mb-4">
+              Discover a world of treats, toys, and essentials handpicked for
+            </p>
+            <button class="bg-white text-lg px-8 py-3 rounded-lg">
+              Buy Now
+            </button>
+          </div>
+
+          <!-- Left Sife -->
+          <div class="grid md:w-2/3 grid-cols-2 md:grid-cols-3 gap-5">
+            <!-- card 1 -->
+            <div class="bg-white flex py-3 pl-3 rounded-lg gap-3">
+              <div class="bg-background rounded-lg">
+                <img src="assets/onion.png" alt="" />
+              </div>
+              <div>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <p>4.5</p>
+                </div>
+                <h4 class="font-medium text-xl">Onion 1 KG</h4>
+                <p>$39.99</p>
+              </div>
+            </div>
+            <!--End of Card 1-->
+            <!-- card 2 -->
+            <div class="bg-white flex py-3 pl-3 rounded-lg gap-3">
+              <div class="bg-background rounded-lg">
+                <img src="assets/tomato.png" alt="" />
+              </div>
+              <div>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <p>4.5</p>
+                </div>
+                <h4 class="font-medium text-xl">Onion 1 KG</h4>
+                <p>$39.99</p>
+              </div>
+            </div>
+            <!--End of Card 2-->
+            <!-- card 3 -->
+            <div class="bg-white flex py-3 pl-3 rounded-lg gap-3">
+              <div class="bg-background rounded-lg">
+                <img src="assets/potato.png" alt="" />
+              </div>
+              <div>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <p>4.5</p>
+                </div>
+                <h4 class="font-medium text-xl">Onion 1 KG</h4>
+                <p>$39.99</p>
+              </div>
+            </div>
+            <!--End of Card 3-->
+            <!-- card 4 -->
+            <div class="bg-white flex py-3 pl-3 rounded-lg gap-3">
+              <div class="bg-background rounded-lg">
+                <img src="assets/tomato.png" alt="" />
+              </div>
+              <div>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <p>4.5</p>
+                </div>
+                <h4 class="font-medium text-xl">Onion 1 KG</h4>
+                <p>$39.99</p>
+              </div>
+            </div>
+            <!--End of Card 4-->
+            <!-- card 5 -->
+            <div class="bg-white flex py-3 pl-3 rounded-lg gap-3">
+              <div class="bg-background rounded-lg">
+                <img src="assets/onion.png" alt="" />
+              </div>
+              <div>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <p>4.5</p>
+                </div>
+                <h4 class="font-medium text-xl">Onion 1 KG</h4>
+                <p>$39.99</p>
+              </div>
+            </div>
+            <!--End of Card 5-->
+            <!-- card 6 -->
+            <div class="bg-white flex py-3 pl-3 rounded-lg gap-3">
+              <div class="bg-background rounded-lg">
+                <img src="assets/potato.png" alt="" />
+              </div>
+              <div>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <p>4.5</p>
+                </div>
+                <h4 class="font-medium text-xl">Onion 1 KG</h4>
+                <p>$39.99</p>
+              </div>
+            </div>
+            <!--End of Card 6-->
+            <!-- card 7 -->
+            <div class="bg-white flex py-3 pl-3 rounded-lg gap-3">
+              <div class="bg-background rounded-lg">
+                <img src="assets/potato.png" alt="" />
+              </div>
+              <div>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <p>4.5</p>
+                </div>
+                <h4 class="font-medium text-xl">Onion 1 KG</h4>
+                <p>$39.99</p>
+              </div>
+            </div>
+            <!--End of Card 7-->
+            <!-- card 8 -->
+            <div class="bg-white flex py-3 pl-3 rounded-lg gap-3">
+              <div class="bg-background rounded-lg">
+                <img src="assets/tomato.png" alt="" />
+              </div>
+              <div>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <p>4.5</p>
+                </div>
+                <h4 class="font-medium text-xl">Onion 1 KG</h4>
+                <p>$39.99</p>
+              </div>
+            </div>
+            <!--End of Card 8-->
+            <!-- card 9 -->
+            <div class="bg-white hidden md:flex py-3 pl-3 rounded-lg gap-3">
+              <div class="bg-background rounded-lg">
+                <img src="assets/onion.png" alt="" />
+              </div>
+              <div>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <p>4.5</p>
+                </div>
+                <h4 class="font-medium text-xl">Onion 1 KG</h4>
+                <p>$39.99</p>
+              </div>
+            </div>
+            <!--End of Card 9-->
+          </div>
+          <!--End of Card Container-->
+        </div>
+      </section>
+
+      <!--Arrival and Offers Section  -->
+      <section class="mb-96 max-w-screen-xl mx-auto px-5">
+        <h1 class="text-lightGreen text-4xl font-semibold mb-12">
+          Arrival and Offers
+        </h1>
+        <div class="flex flex-col md:flex-row gap-5">
+          <!-- Left -->
+          <div
+            class="flex bg-darkGreen rounded-3xl pl-10 md:w-3/5 justify-between"
+          >
+            <div class="pt-10">
+              <img src="assets/dawat-logo.png" alt="" />
+              <button
+                class="py-4 px-10 text-white text-2xl bg-fadeGreen rounded-xl mt-7 mb-7"
+              >
+                Cook Exotic Dishes
+              </button>
+              <p class="text-4xl text-white">
+                UP to <span class="font-bold">20% OFF</span>
+              </p>
+            </div>
+            <div class="pt-8">
+              <img src="assets/dawat-mock-up.png" alt="" />
+            </div>
+          </div>
+
+          <!-- right -->
+          <div class="flex bg-darkBlue rounded-3xl gap-5 pl-3 md:w-2/5">
+            <div class="pt-10">
+              <img src="assets/india-gate-logo.png" alt="" class="w-20" />
+              <button
+                class="py-4 px-6 text-white text-2xl bg-fadeBlue rounded-xl mt-7 mb-7"
+              >
+                Cook Exotic Dishes
+              </button>
+              <p class="text-4xl text-white">
+                UP to <span class="font-bold">20% OFF</span>
+              </p>
+            </div>
+            <div class="pt-8">
+              <img src="assets/india-gate-mock-up.png" alt="" />
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <!-- Footer Section -->
-    <footer></footer>
+    <footer class="bg-lightGreen">
+      <!-- input card -->
+      <div
+        class="max-w-screen-xl mx-5 md:mx-auto bg-background py-10 flex flex-col md:flex-row md:justify-around items-center rounded-3xl relative -top-80 md:-top-52"
+      >
+        <div class="">
+          <img src="assets/vegetable-busket.png" alt="" />
+        </div>
+        <div class="text-center md:text-left">
+          <h1 class="font-semibold text-4xl mb-5 text-lightGreen md:text-black">
+            Get Grocery News!
+          </h1>
+          <p class="text-xl mb-8">
+            Exclusive training tips, ticks, product deals and more.
+          </p>
+          <input
+            type="text"
+            placeholder="Enter email...."
+            class="w-2/3 block p-4 rounded-xl mx-auto md:mx-0"
+          />
+          <button class="bg-lightGreen px-8 py-3 rounded-xl text-white mt-9">
+            Subscribe
+          </button>
+        </div>
+      </div>
+      <!--input card ended-->
+
+      <div class="max-w-screen-xl mx-auto relative -top-20 px-10 lg:px-0">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-28">
+          <div>
+            <img src="assets/logo-footer.png" alt="" />
+            <p class="text-white w-72">
+              Discover a world of treats, toys, and essentialshandpicked for
+              your furry friends
+            </p>
+          </div>
+          <div class="text-white">
+            <ul class="space-y-7">
+              <li><a href="#">Product</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="text-white flex flex-col md:justify-end md:items-end">
+            <div class="space-y-4">
+              <p>Follow Us</p>
+              <div class="w-1/3 flex gap-5">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
